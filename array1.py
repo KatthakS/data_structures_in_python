@@ -10,7 +10,8 @@ class maxOnesArray:
             if i == 1:
                 counter += 1
             else:
-                max_length = counter
+                if counter > max_length:
+                    max_length = counter
                 counter = 0
         return counter if counter>max_length else max_length
 
