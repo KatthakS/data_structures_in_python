@@ -3,6 +3,8 @@
 """
 Constraints:
     * -10^9 <= nums1[i], nums2[i] <= 10^9
+    * m = number of elements in nums1
+    * n = number of elements in nums2
     * nums1.length == m + n
     * nums2.length == n
 """
@@ -18,10 +20,8 @@ class MergeSortedArrays:
         
         m-=1
         n-=1
-        #for i in range(len(nums1), 0, -1):
         while (m >= 0) and (n >= 0):
             if nums1[m] >= nums2[n]:
-                # move nums1 element to the last available positioin at nums1
                 nums1[l1] = nums1[m]
                 m -= 1
             else:
